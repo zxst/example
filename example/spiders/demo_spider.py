@@ -41,11 +41,11 @@ class CFDASpider(Spider):
 
         # extract next page link
         # global site_urls
-        # next_url = response.xpath("//td[@class = 'pageTdE15']/a/@href").extract()[0]
-        # url = response.urljoin(next_url)
-        # if url not in site_urls:
-        #     site_urls.append(url)
-        #     yield Request(url,headers = self.headers)
+        next_url = response.xpath("//td[@class = 'pageTdE15']/a/@href").extract()[0]
+        url = response.urljoin(next_url)
+        if url not in site_urls:
+            site_urls.append(url)
+            yield Request(url,headers = self.headers)
 
     def parse_content(self,response):
 
