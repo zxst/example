@@ -62,9 +62,10 @@ COOKIES_ENABLED = False
 #DOWNLOADER_MIDDLEWARES = {
 #    'example.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
+
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware' : None,
-    'example.middlewares.RandomUserAgent.RandomUserAgent': 543,
+    'example.middlewares.RandomUserAgent.RandomUserAgent': 543
 }
 
 USER_AGENTS = [
